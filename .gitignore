@@ -1,5 +1,5 @@
-jquery-datatable-serverside/bin/*
-jquery-datatable-serverside/obj/*
-jquery-datatable-serverside/packages/*
-jquery-datatable-serverside/.vs/*
-jquery-datatable-serverside/Content/*
+/bin/*
+/obj/*
+/packages/*
+/.vs/*
+/Content/*
