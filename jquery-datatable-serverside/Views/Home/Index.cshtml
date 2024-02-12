@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@section Scripts{
+    <script src="//cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#example').DataTable({
+                processing: true,
+                serverSide: true,
+                pageLength: 3,
+                pagingType: 'full_numbers',
+                ajax: {
+                    url: "/home/data_post", 
+                    type: "Post",
+                    dataSrc: function (data) {
+                        return data.data
+                    },
+                    
+                },
+                columns: [
+                    { "data": "Id" },
+                    { "data": "Name" },
+                    { "data": "Email" }
+                ]
+            });
+        });
+    </script>
+}
+<main>
+    <table id="example" class="display" width="100%">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+    </table>
+
+</main>
